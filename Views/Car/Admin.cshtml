@@ -1,0 +1,142 @@
+﻿@model IEnumerable<CarRent.Models.CarModel>
+
+
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<form asp-action="Edit">
+
+<p>
+   
+    <a class="btn btn-primary" asp-action="Create">Add new vehicle</a>
+    <a class="btn btn-danger" asp-action="DeleteAll">Delete selected</a>
+    <a class="btn btn-success" asp-action="Edit">Hide/Show selected</a>
+
+
+</p>
+<h2>Availability</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <b>#</b>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CarMark)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price) (PLN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Power) (KM)
+                </th>
+                 <th>
+                    @Html.DisplayNameFor(model => model.Mileage) (MI)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+            @foreach (var item in Model) 
+            {
+               
+                if(item.Availability is true)
+
+                    {                    
+                        <tbody>
+                                <tr>
+                                    <td>   
+ 
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CarMark)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Model)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price) PLN
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Power) km
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mileage) mi
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new {id=item.CarId}, new {@class = "btn btn-success"}) 
+                                        @Html.ActionLink("Details", "Details", new { id=item.CarId }, new {@class = "btn btn-info"}) 
+                                        @Html.ActionLink("Delete", "Delete", new {id=item.CarId}, new {@class = "btn btn-danger"})
+                                    </td>
+                                </tr>
+                       </tbody>
+                }
+         }
+     </table>
+
+	 <h2>No-Availability</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <b>#</b>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CarMark)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price) (PLN)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Power) (KM)
+                </th>
+                 <th>
+                    @Html.DisplayNameFor(model => model.Mileage) (MI)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+            @foreach (var item in Model) 
+            {
+                if(item.Availability is false)
+                    {                    
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" />
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CarMark)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Model)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Price) PLN
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Power) km
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Mileage) mi
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new {id=item.CarId}, new {@class = "btn btn-success"}) 
+                                        @Html.ActionLink("Details", "Details", new { id=item.CarId }, new {@class = "btn btn-info"}) 
+                                        @Html.ActionLink("Delete", "Delete", new {id=item.CarId}, new {@class = "btn btn-danger"})
+                                    </td>
+                                </tr>
+                       </tbody>
+                }
+         }
+     </table>
+     </form>
+
+   

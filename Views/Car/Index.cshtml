@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CarRent.Models.CarModel>
+
+
+@{
+    ViewData["Tilte"] = "Index";
+}
+
+
+
+
+
+     <div class="row">    
+
+                              
+                        
+                    @foreach (var item in Model) 
+                    {
+                        if(item.Availability is true)
+                        {
+                <div class="col-sm-4 mt-3">       
+                    <div class="card">
+                        <div class="card-body">
+                              <img class="col-sm-12" src="https://st.depositphotos.com/1987177/3470/v/950/depositphotos_34700099-stock-illustration-no-photo-available-or-missing.jpg"/>
+                                    @if (item.Category == 1) { Write("CAR");}
+                                    @if (item.Category == 2) { Write("MOTORBIKE");}
+                                    @if (item.Category == 3) { Write("OTHER");}
+                            <h5 class="card-title">@Html.DisplayFor(modelItem => item.CarMark) - @Html.DisplayFor(modelItem => item.Model)</h5>
+                                     <p class="card-text"><b>Price </b>@Html.DisplayFor(modelItem => item.Price) PLN</p>
+                                      <p class="card-text"><b>Power </b>@Html.DisplayFor(modelItem => item.Power) km</p>
+                                       <p class="card-text"><b>Mileage </b>@Html.DisplayFor(modelItem => item.Mileage) mi</p>
+
+                                    @Html.ActionLink("Details", "Details", new { id=item.CarId }, new {@class = "btn btn-primary"}) 
+                                        @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                                            { 
+                                                @Html.ActionLink("Edit", "Edit", new { id=item.CarId }, new {@class = "btn btn-warning"})
+                            @if (ViewContext.HttpContext.User.IsInRole("Admin"))
+                            {
+                                @Html.ActionLink("Delete", "Delete", new { id=item.CarId }, new {@class = "btn btn-danger mr-1"})
+                            }
+                }
+                       </div>
+                    </div>
+                </div>
+                                    }
+                                    }
+ 
+            </div>
+
+
+                     
+   
+       
