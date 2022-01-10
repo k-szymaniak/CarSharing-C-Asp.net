@@ -11,8 +11,6 @@ namespace CarRent.Repositories
         CarModel Get(int carId);
         IQueryable<CarModel> GetAll();
 
-
-
         void Add(CarModel car);
         void Update(int carId, CarModel car);
 

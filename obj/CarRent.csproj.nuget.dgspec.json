@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Krzysztof\\source\\repos\\CarRent\\CarRent\\CarRent.csproj": {}
+    "C:\\Users\\Krzysztof\\source\\repos\\CarRent-Pro-AspNet\\CarRent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Krzysztof\\source\\repos\\CarRent\\CarRent\\CarRent.csproj": {
+    "C:\\Users\\Krzysztof\\source\\repos\\CarRent-Pro-AspNet\\CarRent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Krzysztof\\source\\repos\\CarRent\\CarRent\\CarRent.csproj",
+        "projectUniqueName": "C:\\Users\\Krzysztof\\source\\repos\\CarRent-Pro-AspNet\\CarRent.csproj",
         "projectName": "CarRent",
-        "projectPath": "C:\\Users\\Krzysztof\\source\\repos\\CarRent\\CarRent\\CarRent.csproj",
+        "projectPath": "C:\\Users\\Krzysztof\\source\\repos\\CarRent-Pro-AspNet\\CarRent.csproj",
         "packagesPath": "C:\\Users\\Krzysztof\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Krzysztof\\source\\repos\\CarRent\\CarRent\\obj\\",
+        "outputPath": "C:\\Users\\Krzysztof\\source\\repos\\CarRent-Pro-AspNet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -44,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"

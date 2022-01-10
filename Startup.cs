@@ -32,6 +32,9 @@ namespace CarRent
 
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDBContext>();
             services.AddTransient<ICarRepository, CarRepository>();
+
+
+
             services.ConfigureApplicationCookie(options =>
             {
                 options.LoginPath = "/Account/Login";
