@@ -14,6 +14,8 @@ namespace CarRent.Repositories
         void Add(CarModel car);
         void Update(int carId, CarModel car);
 
+        void ChangeAvailability(int carId, CarModel car);
+
         void Delete(int carId);
     }
 }

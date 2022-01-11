@@ -24,12 +24,33 @@ namespace CarRent.Controllers
         // GET: CarController
         public ActionResult Index()
         {
+            
             return View(_carRepository.GetAll());
+        }
+        public ActionResult Cars()
+        {
+
+            return View(_carRepository.GetAll());
+        }
+        public ActionResult Motorcycles()
+        {
+
+            return View(_carRepository.GetAll());
+        }
+        public ActionResult Others()
+        {
+
+            return View(_carRepository.GetAll());
+        }
+        public ActionResult Contact()
+        {
+
+            return View(nameof(Contact));
         }
 
 
 
-    public ActionResult Admin()
+        public ActionResult Admin()
         {
             return View(_carRepository.GetAll());
         }
@@ -76,6 +97,25 @@ namespace CarRent.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangeAvailability(int id, CarModel carModel)
+        {
+            _carRepository.ChangeAvailability(id, carModel);
+
+           
+
+                return RedirectToAction(nameof(Index));
+
+
+        }
+
+        public ActionResult ChangeAvailability(int id)
+        {
+            return View(_carRepository.Get(id));
+        }
+
+
 
         // GET: CarController/Delete/5
         [Authorize(Roles = "Admin")]

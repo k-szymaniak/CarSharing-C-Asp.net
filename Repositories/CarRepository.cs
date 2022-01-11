@@ -63,5 +63,18 @@ namespace CarSharing.Repositories
 
             }
         }
+
+
+        public void ChangeAvailability(int carId, CarModel car)
+        {
+            var result = _context.cars.SingleOrDefault(x => x.CarId == carId);
+            if (car.Availability == true)
+            {
+
+                result.Availability = false == car.Availability;
+                _context.SaveChanges();
+
+            }
+        }
     }
 }

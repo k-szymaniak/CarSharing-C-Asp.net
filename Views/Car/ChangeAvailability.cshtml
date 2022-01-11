@@ -1,0 +1,17 @@
+﻿@model CarRent.Models.CarModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<form asp-action="ChangeAvailability">
+<div class="row col-sm-12 text-center">
+<h1 class="col-sm-12 mt-4">You are sure you want to change availability<b>  @Html.DisplayFor(model => model.CarMark) - @Html.DisplayFor(model => model.Model)</b></h1>
+            <div class="form-group col-sm-12">
+                <input type="submit" value="Yes" class="btn btn-success col-sm-5" />
+                <input type="submit" value="No" class="btn btn-danger col-sm-5" href="javascript: history.go(-1)"/> 
+            </div>
+            </div>
+</form>
