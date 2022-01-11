@@ -81,7 +81,7 @@ namespace CarRent.Controllers
         }
 
         // GET: CarController/Edit/5
-        [Authorize(Roles = "Admin, Mod")]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int id)
         {
             return View(_carRepository.Get(id));

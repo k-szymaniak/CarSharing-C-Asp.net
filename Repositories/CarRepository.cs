@@ -75,6 +75,13 @@ namespace CarSharing.Repositories
                 _context.SaveChanges();
 
             }
+            if (car.Availability == false)
+            {
+
+                result.Availability = true == car.Availability;
+                _context.SaveChanges();
+
+            }
         }
     }
 }

@@ -166,3 +166,4 @@ C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\
 C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Car\Motorcycles.cshtml.g.cs
 C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Car\Others.cshtml.g.cs
 C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Car\Contact.cshtml.g.cs
+C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Account\ChangePassword.cshtml.g.cs
