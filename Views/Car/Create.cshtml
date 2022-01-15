@@ -62,14 +62,22 @@
                 </select>
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
+
+              <div class="form-group file-loading">
+                 <input id="input-b7" name="input-b7[]" multiple type="file" class="file" data-allowed-file-extensions='["csv", "txt"]'>
+                </div>
+
             <div class="form-group form-check">
                 <label class="form-check-label">
                     <input class="form-check-input" asp-for="Availability" />  @Html.DisplayNameFor(model => model.Availability)
                 </label>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Add vehicle" class="btn btn-primary" />
             </div>
+
+
           
         </form>
     </div>
