@@ -45,7 +45,7 @@ namespace CarRent.Controllers
         {
             _carRepository.Add(car);
 
-            return CreatedAtRoute("GetCar", new { id = car.CarMark, car.Model, car.Power, car.FuelType, car.Price, car.Category, car.Mileage, car.Description, car.Availability }, car);
+            return CreatedAtRoute("GetCar", new { id = car.CarMark, car.Model, car.Power, car.FuelType, car.Price, car.CategoryId, car.Mileage, car.Description, car.Availability }, car);
         }
         [Authorize(Roles = "Admin")]
         [HttpDelete("{CarId}")]

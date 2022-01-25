@@ -54,7 +54,7 @@ namespace CarSharing.Repositories
                 result.Power = car.Power;
                 result.FuelType = car.FuelType;
                 result.Price = car.Price;
-                result.Category = car.Category;
+                result.CategoryId = car.CategoryId;
                 result.Mileage = car.Mileage;
                 result.Description = car.Description;
                 result.Availability = car.Availability;

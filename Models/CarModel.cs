@@ -28,7 +28,7 @@ namespace CarRent.Models
         [Required(ErrorMessage = "Required field")]
         public double Price { get; set; }
         [Required(ErrorMessage = "Required field")]
-        public double Category { get; set; }
+        public double CategoryId { get; set; }
         [Required(ErrorMessage = "Required field")]
         public double Mileage { get; set; }
         [Required(ErrorMessage = "Required field")]
@@ -36,5 +36,16 @@ namespace CarRent.Models
         [Required(ErrorMessage = "Required field")]
         public bool Availability { get; set; }
 
+    }
+
+
+
+    [Table("Category")]
+    public class CategoryModel
+    {
+        [Key]
+        public int CategoryId { get; set; }
+        [Required(ErrorMessage ="Required field")]
+        public string CategoryName { get; set; }
     }
 }

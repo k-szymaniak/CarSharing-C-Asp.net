@@ -16,15 +16,15 @@
                         
                     @foreach (var item in Model) 
                     {
-                        if(item.Availability is true && item.Category == 3)
+                        if(item.Availability is true && item.CategoryId == 3)
                         {
                 <div class="col-sm-4 mt-3">       
                     <div class="card">
                         <div class="card-body">
                               <img class="col-sm-12" src="https://st.depositphotos.com/1987177/3470/v/950/depositphotos_34700099-stock-illustration-no-photo-available-or-missing.jpg"/>
-                                    @if (item.Category == 1) { Write("CAR");}
-                                    @if (item.Category == 2) { Write("MOTORBIKE");}
-                                    @if (item.Category == 3) { Write("OTHER");}
+                                    @if (item.CategoryId == 1) { Write("CAR");}
+                                    @if (item.CategoryId == 2) { Write("MOTORBIKE");}
+                                    @if (item.CategoryId == 3) { Write("OTHER");}
                             <h5 class="card-title">@Html.DisplayFor(modelItem => item.CarMark) - @Html.DisplayFor(modelItem => item.Model)</h5>
                                      <p class="card-text ml-4"><b>Price </b>@Html.DisplayFor(modelItem => item.Price) PLN</p>
                                       <p class="card-text ml-4"><b>Power </b>@Html.DisplayFor(modelItem => item.Power) km</p>
