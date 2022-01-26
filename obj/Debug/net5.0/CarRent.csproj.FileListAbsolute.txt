@@ -160,7 +160,6 @@ C:\Users\Krzysztof\Source\Repos\CarRent-Pro-AspNet\obj\Debug\net5.0\CarRent.dll
 C:\Users\Krzysztof\Source\Repos\CarRent-Pro-AspNet\obj\Debug\net5.0\ref\CarRent.dll
 C:\Users\Krzysztof\Source\Repos\CarRent-Pro-AspNet\obj\Debug\net5.0\CarRent.pdb
 C:\Users\Krzysztof\Source\Repos\CarRent-Pro-AspNet\obj\Debug\net5.0\CarRent.genruntimeconfig.cache
-C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Car\ChangeAvailability.cshtml.g.cs
 C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Car\Cars.cshtml.g.cs
 C:\Users\Krzysztof\source\repos\CarRent-Pro-AspNet\obj\Debug\net5.0\Razor\Views\Car\Motorcycles.cshtml.g.cs
