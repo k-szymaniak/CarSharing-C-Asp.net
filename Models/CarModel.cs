@@ -40,12 +40,4 @@ namespace CarRent.Models
 
 
 
-    [Table("Category")]
-    public class CategoryModel
-    {
-        [Key]
-        public int CategoryId { get; set; }
-        [Required(ErrorMessage ="Required field")]
-        public string CategoryName { get; set; }
-    }
 }

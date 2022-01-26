@@ -18,9 +18,7 @@ namespace CarRent.Controllers
             _carRepository = carRepository;
         }
 
-        public CarController()
-        {
-        }
+
 
 
 

@@ -26,10 +26,7 @@ namespace CarRent.Controllers
         {
             return View();
         }
-        public IActionResult ChangePassword()
-        {
-            return View();
-        }
+
         public IActionResult AccessDenied()
         {
             return View();
@@ -62,6 +59,7 @@ namespace CarRent.Controllers
                     await _signInManager.SignInAsync(user, isPersistent: false);
 
                     return RedirectToAction("RegisterSuccess", "Account");
+                    
                 }
 
                 foreach (var error in result.Errors)
@@ -79,13 +77,13 @@ namespace CarRent.Controllers
 
 
         [HttpGet]
-        [AllowAnonymous]
+        
         public IActionResult Login()
         {
             return View();
         }
         [HttpPost]
-        [AllowAnonymous]
+       
         public async Task<IActionResult> Login(LoginViewModel user)
         {
             if (ModelState.IsValid)
@@ -99,6 +97,7 @@ namespace CarRent.Controllers
                 else
                 {
                     ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                    
                 }
 
             }
